@@ -13,28 +13,30 @@
 </head>
 <body>
 
-    <header>
-        <div class="navbar">
-            <div class="logo">
-              <img src="/logo.png" alt="Logo">
+    <div class="container">
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <div class="app-logo">
+                <h1>Contact <span>List App</span></h1>
             </div>
-            <a href="#">Contact List App</a>
-            <a href="#inicio">Inicio</a>
-            <a href="#contactos">Contactos</a>
-            <div class="right">
-              <button onclick="toggleDarkMode()" class="dark-mode-btn"><i class='bx bx-moon'></i></button>
-              <button><i class='bx bx-user-pin'></i>Iniciar Sesión</button>
+
+            <button id="createContactBtn">Crear Contacto</button>
+            <a href="#" id="listContacts">Lista de Contactos</a>
+        </nav>
+
+        <!-- Sección principal -->
+        <div class="main-section">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar contactos...">
             </div>
-          </div>
-          
-    </header>
 
-
-
-
-
-
-
+            <!-- Lista de contactos -->
+            <div id="contactList" class="contact-list">
+                <!-- Los contactos se añadirán aquí mediante JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <script src="/script.js"></script>
 
