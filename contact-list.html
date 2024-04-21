@@ -20,8 +20,21 @@
                 <h1>Contact <span>List App</span></h1>
             </div>
 
-            <a href="/index.html" id="listContacts">Lista de Contactos</a>
-            <a href="#" id="createContactBtn">Crear Contacto</a>
+            <a href="/index.html" id="listContacts">Sección Principal</a>
+            <div class="create-contact">
+                <a href="#" id="createContactBtn">Crear Contacto</a>
+    
+                <!-- Formulario para crear contacto -->
+                <div id="createContactForm" class="create-contact-form">
+                    <h3>Llenar datos de contacto</h3>
+                    <form>
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="text" placeholder="Teléfono" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <button type="submit">Guardar contacto</button>
+                    </form>
+                </div>
+            </div>
         </nav>
 
         <!-- Sección principal -->
