@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/address-book-solid.svg">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Contact List App</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <div class="app-logo">
+                <h1>Contact <span>List App</span></h1>
+            </div>
+
+            <a href="/index.html" id="listContacts">Lista de Contactos</a>
+            <a href="#" id="createContactBtn">Crear Contacto</a>
+        </nav>
+
+        <!-- Sección principal -->
+        <div class="main-section">
+
+            <div class="search-bar">
+                <i class='bx bx-search-alt'></i>
+                <input type="text" id="searchInput" placeholder="Buscar contactos...">
+            </div>
+
+            <!-- Lista de contactos -->
+            <div class="contact-list">
+                <h2>Contactos</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Número</th>
+                            <th>Correo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nombre del Contacto</td>
+                            <td>Número de Teléfono</td>
+                            <td>correo@example.com</td>
+                            <td class="contact-actions">
+                                <div class="action-icon">
+                                    <button><i class="bx bx-edit"></i></button>
+                                </div>
+                                <div class="action-icon">
+                                    <button><i class="bx bx-trash"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+
+</body>
+</html>

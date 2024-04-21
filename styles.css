@@ -8,107 +8,146 @@
 }
 
 :root {
-    --bg-color: #ffffff;
-    --text-color: #0C0C0C;
-    --main-color: #9CAFAA;
+    --bg-color: #31363F;
+    --text-color: #EEEEEE;
+    --main-color: #222831;
+    --blue-color: #76ABAE;
+    --shadow-color: #373A40;
 }
 
-/* Estilos generales */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Contenedor principal */
 .container {
     display: flex;
     height: 100vh;
-    border: 1px solid #ccc;
 }
 
-/* Barra de navegación a la izquierda */
 .navbar {
-    width: 200px;
-    padding: 20px;
-    background-color: #f0f0f0;
-}
-
-.navbar .app-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.navbar .app-logo img {
-    width: 50px;
-    height: 50px;
+    width: 350px;
+    padding: 30px;
+    background-color: var(--main-color);
 }
 
 .navbar h1 {
-    font-size: 1.2rem;
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.navbar h1 span {
+    color: var(--blue-color);
 }
 
 .navbar button, .navbar a {
     display: block;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    margin: 10px auto;
+    padding: 15px 20px; 
+    background-color: var(--blue-color);
+    color: var(--bg-color);
     text-align: center;
     text-decoration: none;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .navbar button:hover, .navbar a:hover {
-    background-color: #45a049;
+    background-color: var(--text-color);
 }
 
 /* Sección principal */
 .main-section {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
+    background-color: var(--bg-color);
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
 }
 
 .search-bar input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: calc(100% - 30px);
+    padding: 12px 12px 12px 50px; 
+    border: 2px solid var(--text-color);
+    border-radius: 25px;
+    background-color: transparent;
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+.search-bar input:hover,
+.search-bar input:focus {
+    border-color: var(--blue-color);
+    outline: none; 
 }
 
 .contact-list {
-    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow-color);
 }
 
-/* Estilo de cada contacto */
-.contact-item {
+.contact-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.contact-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-list th,
+.contact-list td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--text-color); 
+}
+
+.contact-list th {
+    background-color: var(--blue-color);
+    color: var(--main-color);
+}
+
+.contact-list td {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.contact-list .contact-actions {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
+    gap: 5px;
+    align-items: flex-start;
 }
 
-.contact-item p {
-    margin: 0;
-}
-
-.contact-item button {
-    margin-left: 10px;
+.contact-list .action-icon {
     padding: 5px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
+}
+
+.contact-list .action-icon button {
+    padding: 0;
+    border: none; 
+    background: transparent; 
     cursor: pointer;
+    color: var(--text-color); 
+    transition: background-color 0.3s ease;
 }
 
-.contact-item button:hover {
-    background-color: #d32f2f;
+.contact-list .action-icon button:hover {
+    background-color: var(--blue-color); 
+    border-radius: 50%;
+    padding: 5px;
 }
-
-
