@@ -60,22 +60,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Nombre del Contacto</td>
-                            <td>Número de Teléfono</td>
-                            <td>correo@example.com</td>
-                            <td class="contact-actions">
-                                <div class="action-icon">
-                                    <button><i class="bx bx-edit"></i></button>
-                                </div>
-                                <div class="action-icon">
-                                    <button><i class="bx bx-trash"></i></button>
-                                </div>
-                            </td>
+                            
                         </tr>
                     </tbody>
                 </table>
-
             </div>
+
+            <!-- Formulario para editar contacto -->
+            <div id="editContactForm" class="edit-contact-form" style="display: none;">
+                <h3>Editar datos de contacto <span id="closeFormBtn">&times;</span></h3>
+                <form>
+                    <input type="hidden" name="contactId">
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="text" name="phone" placeholder="Teléfono" required>
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                    <button type="submit">Guardar cambios</button>
+                </form>
+            </div>
+
         </div>
     </div>
 

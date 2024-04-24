@@ -240,3 +240,72 @@
     border-radius: 50%;
     padding: 5px;
 }
+
+.edit-contact-form {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: var(--main-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow-color);
+    max-width: 400px;
+    width: 100%;
+}
+
+.edit-contact-form h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.edit-contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-contact-form input[type="text"],
+.edit-contact-form input[type="email"],
+.edit-contact-form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--shadow-color);
+    border-radius: 5px;
+}
+
+.edit-contact-form button {
+    background-color: var(--blue-color);
+    color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-contact-form button:hover {
+    background-color: var(--text-color);
+}
+
+.edit-contact-form input[type="text"]:focus,
+.edit-contact-form input[type="email"]:focus,
+.edit-contact-form button:focus {
+    outline: none;
+    border-color: var(--blue-color);
+}
+
+#closeFormBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+#closeFormBtn:hover {
+    color: var(--blue-color);
+}
+
+
