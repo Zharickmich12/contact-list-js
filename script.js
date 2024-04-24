@@ -1,20 +1,21 @@
+// Ocultar y mostrar el formulario
 const createContactBtn = document.getElementById('createContactBtn');
 const createContactForm = document.getElementById('createContactForm');
 
 function toggleCreateContactForm() {
     if (createContactForm.style.display === 'block') {
-        createContactForm.style.display = 'none'; // Ocultar el formulario
+        createContactForm.style.display = 'none'; 
     } else {
-        createContactForm.style.display = 'block'; // Mostrar el formulario
+        createContactForm.style.display = 'block'; 
     }
 }
 
 createContactBtn.addEventListener('click', toggleCreateContactForm);
 
+// Crear contacto
 document.addEventListener("DOMContentLoaded", function() {
     
-    const createContactForm = document.getElementById('createContactForm');
-    
+    const createContactForm = document.querySelector('#createContactForm form');
     const contactTableBody = document.querySelector('.contact-list table tbody');
 
     function saveContact(event) {
